@@ -109,6 +109,17 @@ function direBonjour() {
     const message = "Bonjour !";
     return message;
   }
+
+
+  // passage en parametres
+  function direBonjour(prenom) {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+  }
+  
+  console.log(direBonjour("Baptiste")); // "Bonjour, Baptiste !"
+  console.log(direBonjour("Sophie")); // "Bonjour, Sophie !"
+  
   
   console.log(direBonjour()); // "Bonjour !"
   console.log(message); // Erreur : la variable message n'existe pas ici
