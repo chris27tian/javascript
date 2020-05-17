@@ -103,7 +103,6 @@ function direBonjour() {
   console.log("Début du programme");
   direBonjour();
   console.log("Fin du programme");
-<<<<<<< HEAD
 
   //Obtenir la taille d'un tableau
   const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
@@ -125,32 +124,4 @@ films.forEach(film => {
   console.log(film);
 });
 
-=======
-  
-  // portee des varaibles
-  function direBonjour() {
-    const message = "Bonjour !";
-    return message;
-  }
 
-
-  // passage en parametres
-  function direBonjour(prenom) {
-    const message = `Bonjour, ${prenom} !`;
-    return message;
-  }
-  
-  console.log(direBonjour("Baptiste")); // "Bonjour, Baptiste !"
-  console.log(direBonjour("Sophie")); // "Bonjour, Sophie !"
-
-  
-  console.log(direBonjour()); // "Bonjour !"
-  console.log(message); // Erreur : la variable message n'existe pas ici
-//fonctions anonymes
-  const bonjour = function(prenom) {
-    const message = `Bonjour, ${prenom} !`;
-    return message;
-  }
-  
-  console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
->>>>>>> fonctions
