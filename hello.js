@@ -119,7 +119,14 @@ function direBonjour() {
   
   console.log(direBonjour("Baptiste")); // "Bonjour, Baptiste !"
   console.log(direBonjour("Sophie")); // "Bonjour, Sophie !"
-  
+
   
   console.log(direBonjour()); // "Bonjour !"
   console.log(message); // Erreur : la variable message n'existe pas ici
+//fonctions anonymes
+  const bonjour = function(prenom) {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+  }
+  
+  console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
