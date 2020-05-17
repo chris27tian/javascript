@@ -104,24 +104,94 @@ function direBonjour() {
   direBonjour();
   console.log("Fin du programme");
 
-  //Obtenir la taille d'un tableau
-  const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
-
-console.log(films.length); // 3
-
-
-// parcourire un tableau
-const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
-
-for (let i = 0; i < films.length; i++) {
-  console.log(films[i]);
-}
-
-// methode foreach
-const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
-
-films.forEach(film => {
-  console.log(film);
-});
+  // portee des varaibles
+  function direBonjour() {
+    const message = "Bonjour !";
+    return message;
+  }
 
 
+  // passage en parametres
+  function direBonjour(prenom) {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+  }
+  
+  console.log(direBonjour("Baptiste")); // "Bonjour, Baptiste !"
+  console.log(direBonjour("Sophie")); // "Bonjour, Sophie !"
+
+  
+  console.log(direBonjour()); // "Bonjour !"
+  console.log(message); // Erreur : la variable message n'existe pas ici
+
+  //fonctions anonymes
+  const bonjour = function(prenom) {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+  }
+  
+  console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
+
+// fonction fleche
+const bonjour = (prenom) => {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+  }
+  
+  console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
+
+  // Dificile de faire plus concis !
+const bonjour = prenom => `Bonjour, ${prenom} !`;
+
+console.log(bonjour("Thomas")); // "Bonjour, Thomas !"
+
+// POO
+const stylo = {
+    type: "bille",
+    couleur: "bleu",
+    marque: "Bic"
+  };
+  
+  // Modification de la propriété "couleur"
+  stylo.couleur = "rouge";
+  
+  // "J'écris avec un stylo bille rouge de marque Bic"
+  console.log(`J'écris avec un stylo ${stylo.type} ${stylo.couleur} de marque ${stylo.marque}`);
+
+
+// aurora
+const aurora = {
+    nom: "Aurora",
+    sante: 150,
+    force: 25
+  };
+  
+  // "Aurora a 150 points de vie et 25 en force"
+  console.log(`${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force`);
+  
+  console.log("Aurora est blessée par une flèche");
+  aurora.sante = aurora.sante - 20;
+  
+  console.log("Aurora trouve un bracelet de force");
+  aurora.force = aurora.force + 10;
+  
+  // "Aurora a 130 points de vie et 35 en force"
+  console.log(`${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force`);
+
+  // methode 
+
+  const aurora = {
+    nom: "Aurora",
+    sante: 150,
+    force: 25,
+  
+    // Renvoie la description du personnage
+    decrire() {
+      return `${this.nom} a ${this.sante} points de vie et ${this.force} en force`;
+    }
+  };
+  
+  // "Aurora a 150 points de vie et 25 en force"
+  console.log(aurora.decrire());
+  
+  
