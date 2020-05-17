@@ -103,3 +103,12 @@ function direBonjour() {
   console.log("Début du programme");
   direBonjour();
   console.log("Fin du programme");
+  
+  // portee des varaibles
+  function direBonjour() {
+    const message = "Bonjour !";
+    return message;
+  }
+  
+  console.log(direBonjour()); // "Bonjour !"
+  console.log(message); // Erreur : la variable message n'existe pas ici
