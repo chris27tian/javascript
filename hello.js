@@ -94,3 +94,12 @@ for (let i = 1; i <= 5; i++) {
 
 
 console.log(i); // Erreur : la variable i n'est pas visible ici
+
+// decouverte des fonctions
+function direBonjour() {
+    console.log("Bonjour !");
+  }
+  
+  console.log("Début du programme");
+  direBonjour();
+  console.log("Fin du programme");
