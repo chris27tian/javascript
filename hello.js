@@ -103,3 +103,24 @@ function direBonjour() {
   console.log("Début du programme");
   direBonjour();
   console.log("Fin du programme");
+
+  //Obtenir la taille d'un tableau
+  const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
+
+console.log(films.length); // 3
+
+
+// parcourire un tableau
+const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
+
+for (let i = 0; i < films.length; i++) {
+  console.log(films[i]);
+}
+
+// methode foreach
+const films = ["Le loup de Wall Street", "Vice-Versa", "Babysitting"];
+
+films.forEach(film => {
+  console.log(film);
+});
+
